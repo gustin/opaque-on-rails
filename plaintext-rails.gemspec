@@ -9,15 +9,15 @@ Gem::Specification.new do |spec|
   spec.version     = Plaintext::Rails::VERSION
   spec.authors     = ["gustin"]
   spec.email       = ["gustin@users.noreply.github.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of Plaintext::Rails."
-  spec.description = "TODO: Description of Plaintext::Rails."
-  spec.license     = "MIT"
+  spec.homepage    = "https://www.getplaintext.com"
+  spec.summary     = "Summary of Plaintext::Rails."
+  spec.description = "Description of Plaintext::Rails."
+  spec.license     = "*"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata["allowed_push_host"] = "Set to 'http://mygemserver.com'"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
