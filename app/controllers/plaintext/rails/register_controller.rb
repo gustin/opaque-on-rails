@@ -1,5 +1,4 @@
-require 'plaintext'
-class RegisterController < ApplicationController
+class Plaintext::Rails::RegisterController < ApplicationController
   def start
     puts '====> Regsistration Start'
     params = JSON.parse(request.raw_post)

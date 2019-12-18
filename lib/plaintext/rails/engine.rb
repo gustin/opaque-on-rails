@@ -1,3 +1,5 @@
+require 'plaintext'
+
 module Plaintext
   module Rails
     class Engine < ::Rails::Engine

@@ -1,5 +1,4 @@
-require 'plaintext'
-class AuthenticateController < ApplicationController
+class Plaintext::Rails::AuthenticateController < ApplicationController
   def start
     puts '===> Authentication Start'
     params = JSON.parse(request.raw_post)
