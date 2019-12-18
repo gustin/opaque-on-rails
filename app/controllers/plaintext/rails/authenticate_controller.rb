@@ -14,9 +14,7 @@ class Plaintext::Rails::AuthenticateController < ApplicationController
     puts '===> Authentication Login'
     params = JSON.parse(request.raw_post)
     puts params
-    Plaintext::Authentication::finalize(params["username"], params["key"], params["x"])
-
-    # return Plaintext::Paseto Session Token, store in database, etc
-    render json: { logged: 'in' }
+    token = Plaintext::Authentication::finalize(params["username"], params["key"], params["x"])
+    render json: { auth: token }
   end
 end
