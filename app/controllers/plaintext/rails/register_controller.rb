@@ -16,6 +16,6 @@ class Plaintext::Rails::RegisterController < ApplicationController
     puts params
     Plaintext::Registration::finalize(params["username"], params["pub_u"], params["auth_env"])
 
-    render json: { final: "hurrah" }
+    render json: { registration: "success" }
   end
 end
