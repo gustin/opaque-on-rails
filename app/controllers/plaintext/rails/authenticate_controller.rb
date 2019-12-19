@@ -10,11 +10,18 @@ class Plaintext::Rails::AuthenticateController < ApplicationController
     render json: { beta: beta, v: v, envelope: envelope, key: key, y: y }
   end
 
+  def second_factor
+    params = JSON.parse(request.raw_post)
+    puts params
+    qr = Plaintext::Authentication::second_factor(params["username"])
+    render json: { qr_code: qr }
+  end
+
   def finalize
     puts '===> Authentication Login'
     params = JSON.parse(request.raw_post)
     puts params
     token = Plaintext::Authentication::finalize(params["username"], params["key"], params["x"])
-    render json: { auth: token }
+    render json: { token: token }
   end
 end
