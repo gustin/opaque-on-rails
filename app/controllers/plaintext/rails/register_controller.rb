@@ -3,7 +3,9 @@ class Plaintext::Rails::RegisterController < ApplicationController
     puts '====> Regsistration Start'
     params = JSON.parse(request.raw_post)
     puts params
-    beta, v, pub_s = Plaintext::Registration::start(params["username"], params["alpha"])
+    beta, v, pub_s = Plaintext::Registration::start(
+      params["username"], params["alpha"]
+    )
     puts "******************************"
     puts  "Beta: #{beta}"
 
@@ -14,7 +16,9 @@ class Plaintext::Rails::RegisterController < ApplicationController
     puts '====> Registration Final'
     params = JSON.parse(request.raw_post)
     puts params
-    Plaintext::Registration::finalize(params["username"], params["pub_u"], params["auth_env"])
+    Plaintext::Registration::finalize(
+      params["username"], params["pub_u"], params["auth_env"]
+    )
 
     render json: { registration: "success" }
   end
