@@ -5,4 +5,6 @@ Plaintext::Rails::Engine.routes.draw do
   post 'authenticate/generate_second_factor'
   post 'register/start'
   post 'register/finalize'
+
+  post 'webauthn/registration_challenge'
 end
