@@ -1,4 +1,4 @@
-class Plaintext::WebAuthNController < ApplicationController
+class Plaintext::Rails::WebauthnController < ApplicationController
   def registration_challenge
     params = JSON.parse(request.raw_post)
     puts params
