@@ -7,4 +7,5 @@ Plaintext::Rails::Engine.routes.draw do
   post 'register/finalize'
 
   post 'webauthn/registration_challenge'
+  post 'webauthn/register_credential'
 end
